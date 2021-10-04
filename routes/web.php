@@ -16,20 +16,20 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
     //     return view('welcome');
     // });
-    
-    
+
+
     // Route::get('/', function () {
         //     return view('index');
         // });
-        
-        
+
+
         Route::get('/', function () {
             return view('home',[
                 "title" => "home"
             ]);
         });
-        
-        
+
+
         Route::get('/blog', function () {
             $blog_post = [
                 [
@@ -43,23 +43,23 @@ use Illuminate\Support\Facades\Route;
                     "bel" => "KI"
                 ],
             ];
-            
-            
+
+
             return view('blog',[
                 "title" => "blog",
                 "post" => $blog_post
             ]);
-            
+
         });
-        
-        
+
+
         Route::get('/admin', function () {
             return view('admin',[
                 "title" => "admin"
             ]);
         });
-        
-        
+
+
         Route::get('/about', function () {
             return view('about',[
                 "title" => "about",
@@ -68,4 +68,13 @@ use Illuminate\Support\Facades\Route;
                 "image" => "nae.jpg"
             ]);
         });
-        
+
+        //halaman single post
+        Route::get('post/{bel}', function ($bel){
+            return view('post',
+            [
+                'title' => 'single post'
+
+            ]);
+
+        });
