@@ -1,0 +1,11 @@
+git config --global user.email "robbyfebrianursaleh@gmail.com"
+
+
+composer create-project --prefer-dist laravel/laravel practiceLaravel
+
+
+
+
+=======================================================================
+
+composer create-project laravel/laravel learnLaravel
